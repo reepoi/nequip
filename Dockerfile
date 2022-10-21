@@ -14,8 +14,6 @@ RUN apt -y install build-essential
 
 RUN apt-get -y install git
 
-RUN apt-get -y install lammps
-
 LABEL taost=taost
 
 COPY . /nequip/
