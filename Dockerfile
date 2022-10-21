@@ -14,7 +14,7 @@ RUN apt -y install build-essential
 
 RUN apt-get -y install git
 
-RUN apt-get install lammps
+RUN apt-get -y install lammps
 
 LABEL taost=taost
 
