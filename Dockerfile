@@ -8,11 +8,14 @@ ENV CUDA_VERSION 11.0.0
 
 ENV LD_LIBRARY_PATH="/usr/local/cuda-11.0/lib64:$LD_LIBRARY_PATH"
 
-RUN apt-get -y update
+# --fix-missing lets lammps sucessfully install
+RUN apt-get -y update --fix-missing
 
 RUN apt -y install build-essential
 
 RUN apt-get -y install git
+
+RUN apt-get -y install lammps
 
 LABEL taost=taost
 
