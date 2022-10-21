@@ -23,6 +23,9 @@ COPY . /nequip/
 
 RUN cd /nequip/ && pip3 install -e .
 
+# These install PyTorch versions that work with this system
+RUN cd /nequip/ && pip3 install -r added_requirements.txt
+
 ENV WANDB_ANONYMOUS=must
 
 ENV CUDA_VISIBLE_DEVICES=all
